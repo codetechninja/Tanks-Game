@@ -25,15 +25,21 @@ class game_scene_1 extends Phaser.Scene {
         //this.createPlayer();
 
 
-        var turret = this.add.image(118, 473, 'turret');
+        var turret = this.add.image(118, 470, 'turret')
+            .setOrigin(0,0.2);
+
         var tank = this.add.image(100, 475, 'tank');
         var angle = 0;
+        var gfx = this.add.graphics().setDefaultStyles({ lineStyle: { width: 10, color: 0x922B21, alpha: 0.5 } });
+        var line = new Phaser.Geom.Line();
 
 
 
         this.input.on('pointermove', function(pointer){
             angle = Phaser.Math.Angle.BetweenPoints(tank, pointer);
-            turret.rotation = angle;
+            turret.rotation = Phaser.Math.Clamp(angle, -Math.PI* 0.5, Math.PI * 0.5)
+            Phaser.Geom.Line.SetToAngle(line, tank.x, tank.y - 10, angle, 128);
+            gfx.clear().strokeLineShape(line);
         }, this);
 
 
