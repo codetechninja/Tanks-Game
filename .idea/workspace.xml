@@ -4,7 +4,11 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4ef15b2-ec12-4ce0-8f43-56e89a12954d" name="Default Changelist" comment="" />
+    <list default="true" id="c4ef15b2-ec12-4ce0-8f43-56e89a12954d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tanks_Game.js" beforeDir="false" afterPath="$PROJECT_DIR$/Tanks_Game.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_scene_1.js" beforeDir="false" afterPath="$PROJECT_DIR$/game_scene_1.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,6 +20,9 @@
         <option value="JavaScript File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1lQWn0UzGH2aDqVZiPuSpKZLTvD" />
   <component name="ProjectViewState">
@@ -54,7 +61,9 @@
       <workItem from="1607959929154" duration="8905000" />
       <workItem from="1608176622609" duration="11687000" />
       <workItem from="1609250550938" duration="3802000" />
-      <workItem from="1609338842288" duration="8490000" />
+      <workItem from="1609338842288" duration="9974000" />
+      <workItem from="1609424648076" duration="1340000" />
+      <workItem from="1609518931388" duration="10075000" />
     </task>
     <servers />
   </component>
@@ -70,11 +79,12 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2080" y="259" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1607561464037" />
-    <state x="718" y="389" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1609339923806">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2638" y="389" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1609527778132">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2638" y="389" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1608199825409" />
     <state x="718" y="389" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1609339923806" />
+    <state x="2638" y="389" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1609527778132" />
     <state width="936" height="347" key="GridCell.Tab.0.bottom" timestamp="1607561481102">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>

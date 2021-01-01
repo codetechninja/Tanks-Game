@@ -11,10 +11,10 @@ let config = {
     scene:[game_scene_1]
 };
 
+var Tank;
+var TankBarrel;
+var TargetBoards;
 
 let game = new Phaser.Game(config)
 
 
-let turrent1, turrent2;
-let target = 0;
-let ROTATION_SPEED = Math.PI / 60; // per update

@@ -1,5 +1,4 @@
 class game_scene_1 extends Phaser.Scene {
-
     constructor()
     {
         super({key:"game_scene_1"});
@@ -22,13 +21,15 @@ class game_scene_1 extends Phaser.Scene {
 
         this.createTargets();
         this.createPlatforms();
-        //this.createPlayer();
 
 
-        var turret = this.add.image(118, 470, 'turret')
-            .setOrigin(0,0.2);
 
-        var tank = this.add.image(100, 475, 'tank');
+
+
+        Tank = this.physics.add.sprite(100, 475, 'tank');
+        TankBarrel = this.physics.add.sprite(118, 470, 'turret')
+            .setOrigin(0 ,0.2);
+        Tank.setCollideWorldBounds(true);
         var angle = 0;
         var gfx = this.add.graphics().setDefaultStyles({ lineStyle: { width: 10, color: 0x922B21, alpha: 0.5 } });
         var line = new Phaser.Geom.Line();
@@ -36,12 +37,16 @@ class game_scene_1 extends Phaser.Scene {
 
 
         this.input.on('pointermove', function(pointer){
-            angle = Phaser.Math.Angle.BetweenPoints(tank, pointer);
-            turret.rotation = Phaser.Math.Clamp(angle, -Math.PI* 0.5, Math.PI * 0.5)
-            Phaser.Geom.Line.SetToAngle(line, tank.x, tank.y - 10, angle, 128);
+            angle = Phaser.Math.Angle.BetweenPoints(Tank, pointer);
+            TankBarrel.rotation = Phaser.Math.Clamp(angle, -Math.PI* 3.141, Math.PI *0)
+            Phaser.Geom.Line.SetToAngle(line, Tank.x, Tank.y - 5, angle, 128);
             gfx.clear().strokeLineShape(line);
         }, this);
 
+        this.keys = this.input.keyboard.addKeys('LEFT,RIGHT,A, D');
+
+
+1
 
     }
     createTargets()
@@ -57,18 +62,25 @@ class game_scene_1 extends Phaser.Scene {
         const target = this.physics.add.staticGroup()
         this.add.image(100,500, 'platform')
     }
-    /*createPlayer()
-    {
-        //  The body of the tank
-        this.tank = this.add.sprite(100, 475, 'tank');
 
-        //  The turret which we rotate (offset 30x14 from the tank)
-        this.turret = this.add.sprite(this.tank.x + 18, this.tank.y - 2, 'turret');
-    }*/
 
 
     update()
     {
+        if(this.keys.A.isDown)
+        {
+            Tank.setVelocityX(-50);
+        }
+        else if(this.keys.D.isDown)
+        {
+            Tank.setVelocityX(50);
+        }
+        else
+        {
+            Tank.setVelocityX(0);
+        }
+
+
 
     }
 
