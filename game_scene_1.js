@@ -70,14 +70,17 @@ class game_scene_1 extends Phaser.Scene {
         if(this.keys.A.isDown)
         {
             Tank.setVelocityX(-50);
+            TankBarrel.setVelocityX(-50);
         }
         else if(this.keys.D.isDown)
         {
             Tank.setVelocityX(50);
+            TankBarrel.setVelocityX(50);
         }
         else
         {
             Tank.setVelocityX(0);
+            TankBarrel.setVelocityX(0);
         }
 
 
